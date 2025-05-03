@@ -1,0 +1,30 @@
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    overflow: none;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #282c34; /* Example background color */
+    padding: 10px 20px; /* Padding for the navbar */
+}
+
+.navbar h1 {
+    color: white; /* Text color for the app name */
+}
+
+.navbar button {
+    background: none;
+    border: none;
+    color: white; /* Text color for buttons */
+    cursor: pointer;
+    font-size: 16px; /* Font size for buttons */
+}
+
+.navbar button:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, and Edge */
+  }
+  
