@@ -4,12 +4,14 @@ import { IoMdSend } from "react-icons/io";
 import useGetmessage from '../../../context/useGetmessage.js';
 import useSendmsg from '../../../context/useSendmsg.js';
 import Loading from '../../Loading.jsx';
+import useGetSocketMessage from "../../../context/useGetSocketMessage.js"
 
 function Msg() {
     const { sendMessage } = useSendmsg();
     const { loading, messages } = useGetmessage();
     const [message, setMessage] = useState("");
     const lastMsgRef = useRef();
+    useGetSocketMessage();
 
     // Scroll to the last message whenever messages update
     useEffect(() => {

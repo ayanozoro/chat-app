@@ -29,7 +29,7 @@ export const sendMessage = async(req , res)=>{
         }
         await conversation.save();
 
-        // Promise.all([newMessage.save(), conversation.save()])
+        Promise.all([newMessage.save(), conversation.save()])
         const receiverSocketId = getReceiverSocketId(receiverId);
         if(receiverSocketId){
             io.to(receiverSocketId).emit('newMessage', newMessage);
